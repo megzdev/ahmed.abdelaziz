@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background-color: #111;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+}
+.container h2,
+.container h1 {
+    margin: 7px 0; /* تقليل المسافات بين العناوين */
+}
+
+.container {
+    margin-top: 20px;
+    background-color: #333;
+    width: 70%;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3d70d7;
+}
+
+.role {
+    font-size: 20px;
+    color: #ddd;
+}
+
+.cards-container {
+    display: flex;
+    width: 72.5%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: #333;
+    width: 50%;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.card i {
+    margin-right: 8px;
+    color: #3d70d7;
+    font-size: 22px;
+}
+
+.skills-container {
+    width: 68.6%;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* العنوان */
+.skills-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* الشبكة */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* كروت المهارات */
+.skill-card {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* اللوجوهات */
+.skill-card img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* النصوص */
+.skill-card p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* تأثير الـ hover */
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.skill-card:hover img {
+    transform: scale(1.1);
+}
+
+.fcontainer {
+    margin-bottom: 20px;
+    background-color: #333;
+    width: 70%;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}/* الخلفية العامة */
+
+/* الكونتينر الرئيسي */
+.projects-container {
+    background-color: #333;
+    width: 70%;
+    height: 320px;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* العنوان */
+.projects-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* الشبكة */
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* كارت المشروع */
+.project-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+/* الحاوية الداخلية للكارت */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* عند مرور الماوس ينقلب الكارت */
+.project-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* وجه الكارت الأمامي والخلفي */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* الوجه الأمامي */
+.card-front {
+    background: #222;
+}
+
+.card-front img {
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.card-front h3 {
+    margin-top: 15px;
+    font-size: 15px;
+    color: white;
+}
+
+/* الوجه الخلفي */
+.card-back {
+    background: rgba(34, 34, 34, 0.9);
+    transform: rotateY(180deg);
+    padding: 15px;
+}
+
+/* نصوص الوجه الخلفي */
+.card-back h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.card-back p {
+    font-size: 14px;
+    color: #bbb;
+    text-align: center;
+}
+
+/* الأزرار */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #3d70d7; /* Border color */
+    border-radius: 20px; /* Rounded corners */
+}
+
+.live {
+    background: transparent;
+    color: white;
+}
+
+.github {
+    background: transparent;
+    color: white;
+}
+
+/* تأثير الأزرار عند المرور */
+.btn:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* تخصيص عرض شريط التمرير بالكامل */
+::-webkit-scrollbar {
+  width: 8px; /* عرض السكروول */
+}
+
+/* تخصيص خلفية المسار الخاص بشريط التمرير */
+::-webkit-scrollbar-track {
+  background: #222; /* لون الخلفية */
+  border-radius: 10px; /* حواف دائرية */
+}
+
+/* تخصيص شريط التمرير نفسه */
+::-webkit-scrollbar-thumb {
+  background: #333; /* لون الشريط */
+  border-radius: 10px; /* حواف دائرية */
+}
+
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    /* جعل الكونتينرات الكبيرة بعرض 90% في الشاشات الصغيرة */
+    .container,
+    .projects-container,
+    .skills-container,
+    .fcontainer {
+        width: 80%;
+    }
+
+    /* جعل النصوص في المنتصف */
+    .container,
+    .cards-container,
+    .projects-container,
+    .skills-container,
+    .fcontainer {
+        text-align: center;
+    }
+
+    /* تقليل عرض كروت Education و Location مع إبقائها جنب بعض */
+    .cards-container {
+        width: 90%; /* توسيع العرض للموبايل */
+        justify-content: center;
+    }
+    
+    .card {
+        width: 45%; /* تصغير العرض قليلاً ليلائم الشاشات الصغيرة */
+    }
+    .card h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .card p {
+        font-size: 10px;
+        color: #ccc;
+    }
+    
+    .card i {
+        margin-right: 8px;
+        color: #3d70d7;
+        font-size: 20px;
+    }
+
+/* نصوص الوجه الخلفي */
+.card-back h3 {
+    font-size: 15px;
+    color: white;
+}
+
+.card-back p {
+    font-size: 12px;
+    color: #bbb;
+    text-align: center;
+}
+
+
+.card-front h3 {
+    margin-top: 15px;
+    font-size: 10px;
+    color: white;
+}
+.projects-grid {
+    flex-direction: column; /* يجعل الكروت تحت بعض */
+    align-items: center; /* توسيط العناصر */
+}
+
+.project-card {
+    width: 250px; /* جعل الكارت يأخذ معظم عرض الشاشة */
+}
+.projects-container{
+    height: 660px;
+}
+.btn {
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #3d70d7; /* Border color */
+    border-radius: 20px; /* Rounded corners */
+}
+
+.intro-text {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3d70d7;
+}
+
+.role {
+    font-size: 15px;
+    color: #ddd;
+}
+.skills-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* كروت المهارات */
+.skill-card {
+    padding: 10px;
+}
+
+/* اللوجوهات */
+.skill-card img {
+    width: 50px;
+    height: 50px;
+}
+/* العنوان */
+.projects-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.card-front img {
+    width: 100%;
+    height: auto;
+}
+.card-front{
+    height: 160px;
+}
+.card-back{
+    height: 140px;
+}
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* تقليل المسافة بين الكروت */
+}
+}
